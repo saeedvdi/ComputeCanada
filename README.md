@@ -1,7 +1,7 @@
 # List of available clusters by default
 1. ssh <username>@Beluga.computecanada.ca
 2. ssh <username>@graham.computecanada.ca
-3. ssh <username>i@narval.alliancecan.ca
+3. ssh <username>@narval.alliancecan.ca
 
 ssh <username>@cedar.computecanada.ca
 
