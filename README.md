@@ -1,14 +1,12 @@
 # List of available clusters by default
-ssh saeedvdi@Beluga.computecanada.ca
-ssh saeedvdi@graham.computecanada.ca
-ssh saeedvdi@narval.alliancecan.ca
+1. ssh <username>@Beluga.computecanada.ca
+2. ssh <username>@graham.computecanada.ca
+3. ssh <username>i@narval.alliancecan.ca
 
-ssh saeedvdi@cedar.computecanada.ca
+ssh <username>@cedar.computecanada.ca
 
 # How to borrow node for you simulation run
 salloc --nodes=<number of nodes needed> --ntasks-per-node=<> --mem-per-cpu=<> --time=24:0:0
-  (E.g. salloc --nodes=10 --ntasks-per-node=10 --mem-per-cpu=32G --time=24:0:0 
-        salloc --nodes=2 --ntasks-per-node=39 --mem-per-cpu=256G --time=24:0:0 )
 
 # HPC_ComputeCanada_Moose
 How to install moose framework on ComputeCanada HPC
