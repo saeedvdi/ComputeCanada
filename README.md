@@ -21,3 +21,4 @@ How to install moose framework on ComputeCanada HPC
 9. cd ../test
 10. make -j6
 11. ./run_tests -j6
+12. Add lines 1, 2, and 4 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
