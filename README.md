@@ -1,8 +1,8 @@
 # List of available clusters by default
 1. ssh <username>@Beluga.computecanada.ca
 2. ssh <username>@graham.computecanada.ca
-3. ssh <username>@narval.alliancecan.ca
-4. ssh <username>@cedar.computecanada.ca
+3. ssh <username>@narval.alliancecan.ca (Moose have been successfully installed and tested)
+5. ssh <username>@cedar.computecanada.ca
 
 # How to borrow node for you simulation run
 salloc --nodes=<number of nodes needed> --ntasks-per-node=<> --mem-per-cpu=<> --time=24:0:0
