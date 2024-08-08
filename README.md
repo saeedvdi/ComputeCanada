@@ -1,8 +1,8 @@
 # List of available clusters by default
-1. ssh <username>@Beluga.computecanada.ca
-2. ssh <username>@graham.computecanada.ca
-3. ssh <username>@narval.alliancecan.ca (Moose have been successfully installed and tested)
-5. ssh <username>@cedar.computecanada.ca
+1. ssh [username]@Beluga.computecanada.ca
+2. ssh [username]@graham.computecanada.ca
+3. ssh [username]@narval.alliancecan.ca (Moose have been successfully installed and tested)
+5. ssh [username]@cedar.computecanada.ca
 
 # How to borrow node for you simulation run
 salloc --nodes=<number of nodes needed> --ntasks-per-node=<> --mem-per-cpu=<> --time=24:0:0
@@ -16,7 +16,7 @@ How to install moose framework on ComputeCanada HPC
 4. export WASP_DIR=$EBROOTWASP
 5. export MOOSE_JOBS=6 METHODS=opt
 6. git clone --depth 1 --branch 2024-03-08 https://github.com/idaholab/moose.git
-7. cd moose
+7. cd moose/scripts
 8. ./update_and_rebuild_libmesh.sh --with-xdr-include=$EBROOTGENTOO/include/tirpc
 9. cd ../test
 10. make -j6
