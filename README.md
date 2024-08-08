@@ -1,5 +1,5 @@
 # List of available clusters by default
-1. ssh [username]@Beluga.computecanada.ca
+1. ssh [username]@Beluga.computecanada.ca (Moose have been successfully installed and tested)
 2. ssh [username]@graham.computecanada.ca
 3. ssh [username]@narval.alliancecan.ca (Moose have been successfully installed and tested)
 5. ssh [username]@cedar.computecanada.ca
