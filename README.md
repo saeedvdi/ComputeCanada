@@ -16,9 +16,10 @@ How to install moose framework on ComputeCanada HPC
 4. export WASP_DIR=$EBROOTWASP
 5. export MOOSE_JOBS=6 METHODS=opt
 6. git clone --depth 1 --branch 2024-03-08 https://github.com/idaholab/moose.git
-7. cd moose/scripts
-8. ./update_and_rebuild_libmesh.sh --with-xdr-include=$EBROOTGENTOO/include/tirpc
-9. cd ../test
-10. make -j6
-11. ./run_tests -j6
-12. Add lines 1, 2, and 4 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
+7. git checkout master
+8. cd moose/scripts
+9. ./update_and_rebuild_libmesh.sh --with-xdr-include=$EBROOTGENTOO/include/tirpc
+10. cd ../test
+11. make -j6
+12. ./run_tests -j6
+13. Add lines 1, 2, and 4 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
