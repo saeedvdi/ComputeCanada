@@ -7,6 +7,14 @@
 # How to borrow node for you simulation run
 salloc --nodes=<number of nodes needed> --ntasks-per-node=<> --mem-per-cpu=<> --time=24:0:0
 
+MOOSE_JOBS is a loose influential environment variable that dictates how many cores to use when executing many of our scripts. While operating on INL HPC login nodes alongside everyone else, it is courtesy to limit your CPU core usage. We prefer that users limit themselves to 6:
+
+export MOOSE_JOBS=6
+
+METHODS is an influential environment variable that dictates how to build libMesh. If this variable is not set, libMesh will by default build 4 methods (taking 4x longer to finish). Most of the time, folks will want to use optimized methods:
+
+export METHODS=opt
+
 # HPC_ComputeCanada_Moose
 How to install moose framework on ComputeCanada HPC
 
