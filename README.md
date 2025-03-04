@@ -33,3 +33,22 @@ How to install moose framework on ComputeCanada HPC
 13. make -j6
 14. ./run_tests -j6
 15. Add lines 1, 2, and 4 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
+
+# Newer Version of moose
+Since the proper wasp version is not installed in moose, follow these instructions. You need to manually install Libmesh, and Wasp
+I tested the install of Libmesh, Wasp, and PETSc on March 4th, 2025 and worked
+First make sure that no wasp module is called first.
+1. module load StdEnv/2023
+2. module load python scipy-stack petsc slepc vtk parmetis eigen boost
+4. Find your desired installation directory (cd projects/def- )
+5. git clone https://github.com/idaholab/moose.git
+6. cd moose
+7. git checkout master
+8. cd moose/scripts
+9. ./update_and_rebuild_libmesh.sh --with-xdr-include=$EBROOTGENTOO/include/tirpc
+10. ./update_and_rebuild_wasp.sh
+11. cd ../test
+12. make -j6
+13. ./run_tests -j6
+14. Add lines 1 and 2 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
+
