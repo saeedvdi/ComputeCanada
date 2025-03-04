@@ -5,7 +5,7 @@
 5. ssh [username]@cedar.computecanada.ca
 
 # How to borrow node for you simulation run
-salloc --nodes=<number of nodes needed> --ntasks-per-node=<> --mem-per-cpu=<> --time=24:0:0
+salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
 
 MOOSE_JOBS is a loose influential environment variable that dictates how many cores to use when executing many of our scripts. While operating on INL HPC login nodes alongside everyone else, it is courtesy to limit your CPU core usage. We prefer that users limit themselves to 6:
 
