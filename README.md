@@ -52,3 +52,16 @@ First make sure that no wasp module is called first.
 13. ./run_tests -j6
 14. Add lines 1 and 2 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
 
+# How to Write a Batch script to submit a job to the queue system on Slurm workload manager (Compute Canada uses Slurm workload manager)
+1. Create a new script file
+2. Submit the Job to Slurm Queue
+  a. sbatch moose_job.sh
+3. Check the Job Status
+  a. squeue --user=yourusername
+4. or check detailed information using:
+  a. scontrol show job JOB_ID
+5. View Output & Errors
+   a. cat moose_output.log
+   b. cat moose_error.log
+
+
