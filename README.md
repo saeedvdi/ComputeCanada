@@ -4,7 +4,7 @@
 3. ssh [username]@narval.alliancecan.ca (Moose have been successfully installed and tested)
 5. ssh [username]@cedar.computecanada.ca
 
-# How to borrow node for you simulation run
+# How to borrow node for your simulation run
 salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
 
 MOOSE_JOBS is a loose influential environment variable that dictates how many cores to use when executing many of our scripts. While operating on INL HPC login nodes alongside everyone else, it is courtesy to limit your CPU core usage. We prefer that users limit themselves to 6:
@@ -35,9 +35,9 @@ How to install moose framework on ComputeCanada HPC
 15. Add lines 1, 2, and 4 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
 
 # Newer Version of moose
-Since the proper wasp version is not installed in moose, follow these instructions. You need to manually install Libmesh, and Wasp
-I tested the install of Libmesh, Wasp, and PETSc on March 4th, 2025 and worked
-First make sure that no wasp module is called first.
+Follow these instructions since the proper wasp version is not installed in moose. You need to install Libmesh and Wasp manually
+I tested the installation of Libmesh, Wasp, and PETSc on March 4th, 2025, and worked
+First, make sure that no wasp module is called first.
 1. module load StdEnv/2023
 2. module load python scipy-stack petsc slepc vtk parmetis eigen boost
 4. Find your desired installation directory (cd projects/def- )
@@ -50,9 +50,9 @@ First make sure that no wasp module is called first.
 11. cd ../test
 12. make -j6
 13. ./run_tests -j6
-14. Add lines 1 and 2 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart your libraries will load automatically
+14. Add lines 1 and 2 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart, your libraries will load automatically
 
-# How to Write a Batch script to submit a job to the queue system on Slurm workload manager (Compute Canada uses Slurm workload manager)
+# How to write a Batch script to submit a job to the queue system on Slurm workload manager (Compute Canada uses Slurm workload manager)
 1. Create a new script file
 2. Submit the Job to Slurm Queue
   a. sbatch moose_job.sh
