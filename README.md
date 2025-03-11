@@ -55,21 +55,12 @@ First, make sure that no wasp module is called first.
 
 # How to write a Batch script to submit a job to the queue system on Slurm workload manager (Compute Canada uses Slurm workload manager)
 1. Create a new script file
-2. Submit the Job to Slurm Queue
-  a. sbatch moose_job.sh
-3. Check the Job Status
-   squeue --user=yourusername
-      or
-   squeue -u yourusername
-5. or check detailed information using:
-  a. scontrol show job JOB_ID
-6. View Output & Errors
-   a. cat moose_output.log
-   b. cat moose_error.log
+2. Submit the Job to Slurm Queue (sbatch moose_job.sh)
+3. Check the Job Status (squeue --user=yourusername or squeue -u yourusername)
+5. or check detailed information using (scontrol show job JOB_ID)
+6. View Output & Errors (cat moose_output.log and cat moose_error.log)
 
 Notes:
-1. Check cluster Limits
-   sinfo -o "%P %c %m %G"
-2. You can cancel a job by running:
-   scancel JOB_ID
+1. Check cluster Limits (sinfo -o "%P %c %m %G")
+2. You can cancel a job by running (scancel JOB_ID)
 
