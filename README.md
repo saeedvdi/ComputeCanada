@@ -7,6 +7,7 @@
 # How to borrow node for your simulation run
 salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
 
+# Prerequisite to use moose on Clusters
 MOOSE_JOBS is a loose influential environment variable that dictates how many cores to use when executing many of our scripts. While operating on INL HPC login nodes alongside everyone else, it is courtesy to limit your CPU core usage. We prefer that users limit themselves to 6:
 
 export MOOSE_JOBS=6
@@ -57,11 +58,18 @@ First, make sure that no wasp module is called first.
 2. Submit the Job to Slurm Queue
   a. sbatch moose_job.sh
 3. Check the Job Status
-  a. squeue --user=yourusername
-4. or check detailed information using:
+   squeue --user=yourusername
+      or
+   squeue -u yourusername
+5. or check detailed information using:
   a. scontrol show job JOB_ID
-5. View Output & Errors
+6. View Output & Errors
    a. cat moose_output.log
    b. cat moose_error.log
 
+Notes:
+1. Check cluster Limits
+   sinfo -o "%P %c %m %G"
+2. You can cancel a job by running:
+   scancel JOB_ID
 
