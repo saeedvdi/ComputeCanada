@@ -7,7 +7,7 @@
 # How to borrow node for your simulation run
 salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
 
-# How to generate an ssh key pair for connecting to Niagara and mist
+# How to generate an SSH key pair for connecting to Niagara and mist
 1. If you want to use the RSA algorithm
   1. ssh-keygen -t rsa -b 4096 -C "your_email_adress@"
   2. -t rsa: Specifies the type of key to create, in this case, RSA.
@@ -59,6 +59,24 @@ I tested the installation of Libmesh, Wasp, and PETSc on March 4th, 2025, and wo
 First, make sure that no wasp module is called first.
 1. module load StdEnv/2023
 2. module load python scipy-stack petsc slepc vtk parmetis eigen boost
+4. Find your desired installation directory (cd projects/def- )
+5. git clone https://github.com/idaholab/moose.git
+6. cd moose
+7. git checkout master
+8. cd moose/scripts
+9. ./update_and_rebuild_libmesh.sh --with-xdr-include=$EBROOTGENTOO/include/tirpc
+10. ./update_and_rebuild_wasp.sh
+11. cd ../test
+12. make -j6
+13. ./run_tests -j6
+14. Add lines 1 and 2 to your bashrc profile (nano ~/.bashrc) and source ~/.bashrc to activate the environment correctly. Now, after each restart, your libraries will load automatically
+
+# Newer Version of moose instalation on Niagara
+Follow these instructions since the proper wasp version is not installed in moose. You need to install Libmesh and Wasp manually
+I tested the installation of Libmesh, Wasp, and PETSc on March 4th, 2025, and worked
+First, make sure that no wasp module is called first.
+1. #%module load NiaEnv/2022a
+2. #%module load python/3.11.5 petsc/3.13.5 vtk/9.0.1 parmetis/4.0.3 eigen/3.4.0 boost/1.78.0
 4. Find your desired installation directory (cd projects/def- )
 5. git clone https://github.com/idaholab/moose.git
 6. cd moose
