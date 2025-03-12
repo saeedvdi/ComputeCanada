@@ -75,8 +75,8 @@ First, make sure that no wasp module is called first.
 Follow these instructions since the proper wasp version is not installed in moose. You need to install Libmesh and Wasp manually
 I tested the installation of Libmesh, Wasp, and PETSc on March 4th, 2025, and worked
 First, make sure that no wasp module is called first.
-1. #%module load NiaEnv/2022a
-2. #%module load python/3.11.5 petsc/3.13.5 vtk/9.0.1 parmetis/4.0.3 eigen/3.4.0 boost/1.78.0
+1. module load NiaEnv/2019b
+2. module load python/3.11.5 petsc/3.13.5 vtk/9.0.1 parmetis/4.0.3 eigen/3.4.0 boost/1.78.0
 4. Find your desired installation directory (cd projects/def- )
 5. git clone https://github.com/idaholab/moose.git
 6. cd moose
