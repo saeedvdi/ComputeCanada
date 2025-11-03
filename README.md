@@ -8,22 +8,18 @@
 salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
 
 # How to generate an SSH key pair for connecting to Niagara and mist
-1. If you want to use the RSA algorithm
-  1. ssh-keygen -t rsa -b 4096 -C "your_email_adress@"
-  2. -t rsa: Specifies the type of key to create, in this case, RSA.
-  3. -b 4096: Sets the key size to 4096 bits (recommended for stronger security).
-2. If you prefer to use ed25519
+How to use ed25519
   1. ssh-keygen -t ed25519 -C "your_email_adress@"  
-3. After running the command, it will prompt you to choose a location for saving the key. Press Enter to accept the default location (~/.ssh/id_rsa or ~/.ssh/id_ed25519)
+2. After running the command, it will prompt you to choose a location for saving the key. Press Enter to accept the default location (~/.ssh/id_rsa or ~/.ssh/id_ed25519)
    Or if you want to change the locaiotn in which the ssh key to be saved, you write something like:
    Enter file in which to save the key (/Users/saeedvadiee/.ssh/id_ed25519): /Users/saeedvadiee/.ssh/orca_git
-6. You'll also be asked to enter a passphrase (optional but recommended for extra security
-7. After generating the key, you'll find your private key in the file ~/.ssh/id_rsa (or ~/.ssh/id_ed25519)
-8. The next step would be to install the public part of the key
-9. This is done using ssh-copy-id command
-10. ssh-copy-id -i /home/saeed/.ssh/id_ed25519.pub <your_user_name>@narval.computecanada.ca
+3. You'll also be asked to enter a passphrase (optional but recommended for extra security
+4. After generating the key, you'll find your private key in the file ~/.ssh/id_rsa (or ~/.ssh/id_ed25519)
+5. The next step would be to install the public part of the key
+6. This is done using ssh-copy-id command
+7. ssh-copy-id -i /home/saeed/.ssh/id_ed25519.pub <your_user_name>@narval.computecanada.ca
 
-  11. Follow the instructions on https://docs.alliancecan.ca/wiki/SSH_Keys to upload it  
+  8. Follow the instructions on https://docs.alliancecan.ca/wiki/SSH_Keys to upload it  
 
 Note:
 1. Windows (using Git Bash): If you are using Windows, install Git for Windows, which includes Git Bash, and then use the same command as above to generate your key pair.
