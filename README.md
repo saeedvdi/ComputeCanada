@@ -15,13 +15,15 @@ salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
 2. If you prefer to use ed25519
   1. ssh-keygen -t ed25519 -C "your_email_adress@"  
 3. After running the command, it will prompt you to choose a location for saving the key. Press Enter to accept the default location (~/.ssh/id_rsa or ~/.ssh/id_ed25519)
-4. You'll also be asked to enter a passphrase (optional but recommended for extra security
-5. After generating the key, you'll find your private key in the file ~/.ssh/id_rsa (or ~/.ssh/id_ed25519)
-6. The next step would be to install the public part of the key
-7. This is done using ssh-copy-id command
-8. ssh-copy-id -i /home/saeed/.ssh/id_ed25519.pub <your_user_name>@narval.computecanada.ca
+   Or if you want to change the locaiotn in which the ssh key to be saved, you write something like:
+   Enter file in which to save the key (/Users/saeedvadiee/.ssh/id_ed25519): /Users/saeedvadiee/.ssh/orca_git
+6. You'll also be asked to enter a passphrase (optional but recommended for extra security
+7. After generating the key, you'll find your private key in the file ~/.ssh/id_rsa (or ~/.ssh/id_ed25519)
+8. The next step would be to install the public part of the key
+9. This is done using ssh-copy-id command
+10. ssh-copy-id -i /home/saeed/.ssh/id_ed25519.pub <your_user_name>@narval.computecanada.ca
 
-  9. Follow the instructions on https://docs.alliancecan.ca/wiki/SSH_Keys to upload it  
+  11. Follow the instructions on https://docs.alliancecan.ca/wiki/SSH_Keys to upload it  
 
 Note:
 1. Windows (using Git Bash): If you are using Windows, install Git for Windows, which includes Git Bash, and then use the same command as above to generate your key pair.
