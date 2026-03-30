@@ -3,6 +3,7 @@
 2. ssh [username]@graham.computecanada.ca
 3. ssh [username]@narval.alliancecan.ca (Moose have been successfully installed and tested)
 5. ssh [username]@cedar.computecanada.ca
+6. ssh [username]@rorqual.alliancecan.ca (Moose have been successfully installed and tested)
 
 # How to borrow node for your simulation run
 salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
