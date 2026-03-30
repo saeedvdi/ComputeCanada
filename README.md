@@ -7,6 +7,7 @@
 
 # How to borrow node for your simulation run
 salloc --ntasks-per-node=<> --mem-per-cpu=<>Gb --time=24:0:0
+salloc --n=1 --ntasks-per-node=32 --mem-per-cpu=16Gb --time=24:0:0
 
 # How to generate an SSH key pair for connecting to Niagara and mist
 How to use ed25519
